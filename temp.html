@@ -1,0 +1,182 @@
+
+<html lang="en">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Tu's Project Site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-highway.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="tempstyle.css">
+  </head>
+  <body> 
+
+    <section class="navigation w3-metro-light-blue w3-container">
+      <button onclick="goToTop()" id="back-to-top" title="Go to top"><i class="fa fa-toggle-up"></i></button>
+      <nav class="nav-container">
+        <div class="logo w3-padding-large"> 
+          <p>Tu's Project Site</p>
+        </div>
+        <div class="mobile-button">
+          <span style="float: right;" onclick="toggleMobileNavigation()">&#9776;</span>
+        </div>
+        <div class="links">
+       
+          <li><a href="temp.html">Temp</a></li>
+                    
+        </div>
+        <div id="mobile-sidenav" class="mobile-links w3-sand">
+          <a href="javascript:void(0)" class="closebtn w3-round" onclick="toggleMobileNavigation()">&times;</a>
+       
+          <li><a href="temp.html">Temp</a></li>
+       
+        </div>
+      </nav>
+    </section>
+
+ <section id="temp.html" class="w3-container container temp.html content">
+       <div class="leadership content container w3-margin-top w3-round-large">
+        <h3 style="text-align: center;">- Temp Stuff -</h3>
+        <p style="text-align: center;"><em>"Hi Tu Anh"
+<br>
+<br>		
+Yap Yap Yap Yap Yap
+<br>
+<br>		
+Yap Yap Yap
+<br>
+<br>		
+More Yapping
+<br>
+<br>
+<br>		
+Yap
+<br>
+<br>		
+Yap
+<br>
+<br>		
+Yap
+<br>
+<br>
+More Yapping
+<br>
+<br>
+
+More Yapping
+<br>
+<br>		
+More Yapping
+<br>
+<br>		
+More Yapping
+<br>
+<br>		
+More Yapping
+<br>		
+More Yapping
+<br>		
+More Yapping
+<br>
+<br>		
+More Yapping
+<br>
+More Yapping
+<br>
+More Yapping
+<br>
+More Yapping
+<br>
+<br>		
+More Yapping
+<br>
+<br>
+<br>	
+More Yapping
+<br>
+<br>
+More Yapping
+<br>
+<br>
+<br>
+More Yapping
+<br>
+<br>
+More Yapping
+<br>
+<br>
+More Yapping
+<br>
+<br>
+More Yapping
+<br>
+<br>
+More Yapping
+<br>
+<br>
+More Yapping
+<br>
+<br>
+More Yapping
+       
+       </div>
+      </div>
+    </section>
+  <!-- This is the footer like bottom part//-->
+    <section class="w3-container footer">
+      <p class="w3-center logo">Tu's Website</p>
+    </section>
+
+
+  <script async>
+      const backToTop = document.getElementById("back-to-top");
+
+      function toggleMobileNavigation() {
+        const mobileNavigation = document.getElementById("mobile-sidenav");
+        mobileNavigation.classList.toggle('mobile-links-active');
+      }
+
+      function goToTop() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+
+      function scroll() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) backToTop.style.display = "block";
+        else backToTop.style.display = "none";
+      }
+
+      window.onscroll = function() {scroll()};
+  </script>
+  <script async>
+      let slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+
+      function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";  
+        dots[slideIndex-1].className += " active";
+      }
+  </script>
+  </body>
+</html>
